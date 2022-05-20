@@ -1,3 +1,5 @@
+package src.Chatty_bot;
+
 import java.util.Scanner;
 
 public class Chatty_Bot {
@@ -64,5 +66,4 @@ public class Chatty_Bot {
             System.out.println("Congratulations, have a nice day!"); // Do not change this text
         }
     }
-
 }
