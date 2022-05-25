@@ -1,4 +1,4 @@
-package src.Different_tasks;
+package src.Different_tasks.Iterating_over_arrays;
 
 /**
  * Count how many times a number occurs
@@ -16,7 +16,7 @@ package src.Different_tasks;
 
 import java.util.Scanner;
 
-public class Iterating_over_arrays {
+public class Count_how_many_times_a_number_occurs {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
