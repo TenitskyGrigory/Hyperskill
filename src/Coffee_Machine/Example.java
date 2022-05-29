@@ -1,11 +1,28 @@
 package src.Coffee_Machine;
 
+import java.util.Scanner;
 public class Example {
     public static void main(String[] args) {
+        enum Direction {
+            EAST("E"),
+            WEST("W"),
+            NORTH("N"),
+            SOUTH("S");
 
-                double number = 1357.05;
-                double number_log = Math.log10(number);
-                double number_round =  Math.round(number_log);
-                System.out.println(number_round);
+            private final String shortCode;
+
+            Direction(String code) {
+                this.shortCode = code;
+            }
+
+            public String getShortCode() {
+                return this.shortCode;
             }
         }
+        Direction.NORTH.toString();
+        Direction.NORTH.getShortCode();
+        Direction.NORTH.name();
+        Direction.valueOf("NORTH");
+    }
+
+}
