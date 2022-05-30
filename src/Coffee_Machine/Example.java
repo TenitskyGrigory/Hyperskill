@@ -3,26 +3,26 @@ package src.Coffee_Machine;
 import java.util.Scanner;
 public class Example {
     public static void main(String[] args) {
-        enum Direction {
-            EAST("E"),
-            WEST("W"),
-            NORTH("N"),
-            SOUTH("S");
+        class A {
 
-            private final String shortCode;
+            private A() { }
 
-            Direction(String code) {
-                this.shortCode = code;
-            }
-
-            public String getShortCode() {
-                return this.shortCode;
+            void invokeB() {
+//                B objB = new B(); // (1)
+//                int b = objB.b;   // (2)
+//                int c = objB.c;   // (3)
             }
         }
-        Direction.NORTH.toString();
-        Direction.NORTH.getShortCode();
-        Direction.NORTH.name();
-        Direction.valueOf("NORTH");
+
+        class B {
+
+            protected int b;
+            private int c;
+
+            public void invokeA() {
+                A objA = new A(); // (4)
+            }
+        }
     }
 
 }
