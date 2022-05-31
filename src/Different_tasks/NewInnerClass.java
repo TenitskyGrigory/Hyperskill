@@ -13,8 +13,7 @@ package src.Different_tasks;
  *
  * Please, don't use the access modifier private for a class or a method.
  */
-public class NewInnerClass {
-    static class Vehicle {
+class Vehicle {
 
         private String name;
 
@@ -55,5 +54,4 @@ public class NewInnerClass {
             Vehicle.Body body = vehicle.new Body("red");
             body.printColor();
         }
-    }
 }
