@@ -23,6 +23,5 @@ public class FillTheMatrixByNumbers {
             }
             System.out.println();
         }
-
     }
 }
