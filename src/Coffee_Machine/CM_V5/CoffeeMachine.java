@@ -1,4 +1,7 @@
 package src.Coffee_Machine.CM_V5;
+
+import java.util.Scanner;
+
 /**
  * Description
  * But just one action isn’t interesting. Let's improve the program so it can do multiple actions,
@@ -23,8 +26,6 @@ package src.Coffee_Machine.CM_V5;
  * For the latte, the coffee machine needs 350 ml of water, 75 ml of milk, and 20 g of coffee beans. It costs $7.
  * And for the cappuccino, the coffee machine needs 200 ml of water, 100 ml of milk, and 12 g of coffee. It costs $6.
  */
-
-import java.util.Scanner;
 
 public class CoffeeMachine {
     public static void main(String[] args) {
