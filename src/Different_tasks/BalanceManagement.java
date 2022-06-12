@@ -1,4 +1,7 @@
 package src.Different_tasks;
+
+import java.util.Scanner;
+
 /**
  * Your task is to implement the method changeBalance to control balances. It has the following declaration:
  *
@@ -23,8 +26,6 @@ package src.Different_tasks;
  * In this case, the method returns "false", the account's balance is not changed (2000)
  * and method prints "Not enough money to withdraw.".
  */
-
-import java.util.Scanner;
 
 public class BalanceManagement {
 
