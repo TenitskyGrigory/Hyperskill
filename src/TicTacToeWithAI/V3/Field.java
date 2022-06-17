@@ -1,12 +1,12 @@
-package src.TicTacToeWithAI.V2_V2;
+package src.TicTacToeWithAI.V3;
 
 import java.util.Random;
 import java.util.Scanner;
 
-import static src.TicTacToeWithAI.V2_V2.GameResult.DRAW;
-import static src.TicTacToeWithAI.V2_V2.GameResult.NOT_FINISHED;
-import static src.TicTacToeWithAI.V2_V2.GameResult.OWIN;
-import static src.TicTacToeWithAI.V2_V2.GameResult.XWIN;
+import static src.TicTacToeWithAI.V3.GameResult.DRAW;
+import static src.TicTacToeWithAI.V3.GameResult.NOT_FINISHED;
+import static src.TicTacToeWithAI.V3.GameResult.OWIN;
+import static src.TicTacToeWithAI.V3.GameResult.XWIN;
 
 public class Field {
     Scanner scanner = new Scanner(System.in);
@@ -33,7 +33,7 @@ public class Field {
         System.out.println("---------");
     }
 
-    public void coordinates() {
+    public void coordinatesFirstPlayer() {
         String coordinates;
         boolean correctInput = false;
         do {
@@ -50,7 +50,37 @@ public class Field {
         while (!correctInput);
     }
 
-    public void computerTurn() {
+    public void coordinatesSecondPlayer() {
+        String coordinates;
+        boolean correctInput = false;
+        do {
+            System.out.print("Enter the coordinates: > ");
+            coordinates = scanner.nextLine();
+            if (!checkCoordinates(coordinates)) {
+                gameCoordinates = new Coordinates(Integer.parseInt(String.valueOf(coordinates.charAt(0))), Integer.parseInt(String.valueOf(coordinates.charAt(2))));
+                if (!checkIfOccupied(gameCoordinates.getY(), gameCoordinates.getX())) {
+                    field[gameCoordinates.getY()][gameCoordinates.getX()] = 'O';
+                    correctInput = true;
+                }
+            }
+        }
+        while (!correctInput);
+    }
+
+    public void computerFirst() {
+        Random random = new Random();
+        System.out.println("Making move level \"easy\"");
+        while (true) {
+            int column = random.nextInt(3);
+            int row = random.nextInt(3);
+            if (field[column][row] == ' ') {
+                field[column][row] = 'X';
+                break;
+            }
+        }
+    }
+
+    public void computerSecond() {
         Random random = new Random();
         System.out.println("Making move level \"easy\"");
         while (true) {
@@ -106,7 +136,7 @@ public class Field {
             }
         }
         if (field[0][0] + field[1][1] + field[2][2] == 264
-            || field[0][2] + field[1][1] + field[2][0] == 264) {
+                || field[0][2] + field[1][1] + field[2][0] == 264) {
             return XWIN;
         }
         if (field[0][0] + field[1][1] + field[2][2] == 237

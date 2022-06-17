@@ -20,6 +20,7 @@ public class Launcher {
                 result = field.printResult(field);
             }
         }
+        field.printField();
         System.out.println(field.printResult(field).getMassage());
     }
 }
