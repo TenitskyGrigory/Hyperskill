@@ -1,4 +1,7 @@
 package src.Different_tasks;
+
+import java.util.Scanner;
+
 /**
  * A bus tour of Europe has been very successful. Due to an increase in the number of people who want to go on a tour,
  * the tour company decided to increase the height of the bus. The new height of the bus is exactly N centimeters.
@@ -13,8 +16,6 @@ package src.Different_tasks;
  * (where i is the number of the bridge) into which the bus will crash. If the height of a bridge equals the height of the bus,
  * the bus will crash.
  */
-
-import java.util.Scanner;
 
 public class Bus_tour {
     public static void main(String[] args) {
