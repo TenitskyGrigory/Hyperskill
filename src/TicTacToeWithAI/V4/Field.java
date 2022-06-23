@@ -77,8 +77,7 @@ public class Field {
                 field[column][row] = 'X';
                 break;
             }
-        }
-    }
+        }    }
 
     public void computerSecond() {
         Random random = new Random();
