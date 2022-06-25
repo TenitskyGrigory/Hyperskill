@@ -1,4 +1,4 @@
-package src.TicTacToeWithAI.V4;
+package src.TicTacToeWithAI.V4.V1;
 
 public class Coordinates {
     public int y;

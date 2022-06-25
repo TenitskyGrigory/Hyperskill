@@ -1,4 +1,4 @@
-package src.TicTacToeWithAI.V4;
+package src.TicTacToeWithAI.V4.V3;
 
 public enum GameResult {
     XWIN("X wins"),

@@ -1,11 +1,10 @@
-package src.TicTacToeWithAI.V4;
+package src.TicTacToeWithAI.V4.V1;
 
 import java.util.Scanner;
 
-import static src.TicTacToeWithAI.V4.GameResult.DRAW;
-import static src.TicTacToeWithAI.V4.GameResult.NOT_FINISHED;
-import static src.TicTacToeWithAI.V4.GameResult.OWIN;
-import static src.TicTacToeWithAI.V4.GameResult.XWIN;
+import static src.TicTacToeWithAI.V4.V1.GameResult.DRAW;
+import static src.TicTacToeWithAI.V4.V1.GameResult.OWIN;
+import static src.TicTacToeWithAI.V4.V1.GameResult.XWIN;
 
 /**
  * Description
