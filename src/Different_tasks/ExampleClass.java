@@ -1,24 +1,51 @@
 package src.Different_tasks;
 
-class Counter {
+class BaseNumberGenerator {
 
-    protected int i = 1221;
+    protected int base;
 
-    void printCount(){
-        System.out.println(i);
+    public BaseNumberGenerator(int base) {
+        this.base = base;
     }
 
-    void incCount(){
-        i = i + 1;
+    public int generate() {
+        return base + 11;
     }
-
 }
 
-public class ExampleClass {
+class NumberGenerator extends BaseNumberGenerator {
 
-    public static void main(String[] args) {
-        Counter counter = new Counter();
-        System.out.println(counter.i);
+
+    public NumberGenerator(int base) {
+        super(base);
     }
 
+    @Override
+    public int generate() {
+
+        return super.generate() + getNumber();
+    }
+
+
+    protected int getNumber() {
+        return this.base - 7;
+    }
+}
+
+class MagicNumberGenerator extends NumberGenerator {
+
+
+    public MagicNumberGenerator(int base) {
+        super(base);
+    }
+
+    @Override
+    protected int getNumber() {
+        return this.base + 7;
+    }
+
+    public static void main(String[] args) {
+        BaseNumberGenerator generator = new MagicNumberGenerator(10);
+        System.out.println(generator.generate());
+    }
 }
